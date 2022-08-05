@@ -1,0 +1,10 @@
+image: python:3.6
+
+stages:
+  - unittest
+
+test:
+  stage: unittest
+  script:
+    - pip3.6 install --upgrade pip pytest
+    - pytest --verbose

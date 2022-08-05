@@ -1,9 +1,10 @@
 def validate_tin(tin: str) -> int:
     """
-    tin format: n1n2n3n4n5n6n7n8n9 n10 n11n12n13
-    n10 is check sum
+    tin format: `n1n2n3n4n5n6n7n8n9 n10 n11n12n13`.
 
-    returns 1 if valid else 0
+    `n10` is checksum
+
+    returns `1` if valid else `0`
     """
     if not isinstance(tin, str):
         raise ValueError("The input of tax identifier number needs to be a string.")

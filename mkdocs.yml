@@ -1,0 +1,43 @@
+site_name: Vntinchecker Docs
+extra_css: [style.css]
+repo_url: https://github.com/lampts/vntinchecker
+site_url: https://lampts.github.io/vntinchecker/
+site_description: A small python library that can check the tax id in Vietnam.
+site_author: Lam Pham
+use_directory_urls: false
+nav:
+  - Home:
+    - Index: index.md
+  - API:
+      - vietnam tax id checker: api/vntin.md
+
+plugins:
+  - mkdocstrings:
+      watch:
+        - vntin
+  - search
+copyright: Copyright &copy; 2022 Maintained by <a href="https://twitter.com/saigonapss">Lam Pham</a>.
+theme:
+  name: material
+  custom_dir: theme/
+  icon:
+    logo: material/library
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  favicon: logo.svg
+  logo: logo.svg
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: blue
+markdown_extensions:
+  - codehilite
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.highlight:
+      use_pygments: true
+  - toc:
+      permalink: true

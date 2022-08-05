@@ -13,6 +13,9 @@ interrogate:
 
 check: black flake test interrogate
 
+develop:
+	pip install mkdocs==1.1 mkdocs-material==4.6.3 mkdocstrings==0.8.0 jinja2==3.0.0
+
 install:
 	pip install rich
 	python -m pip install -e .
@@ -29,6 +32,12 @@ pypi:
 	python setup.py sdist
 	python setup.py bdist_wheel --universal
 	twine upload dist/*
+
+deploy:
+	mkdocs gh-deploy
+
+serve:
+	mkdocs serve
 
 clean:
 	rm -rf **/.ipynb_checkpoints **/.pytest_cache **/__pycache__ **/**/__pycache__ .ipynb_checkpoints .pytest_cache
